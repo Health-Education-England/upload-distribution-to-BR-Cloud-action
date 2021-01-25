@@ -14,7 +14,7 @@ inputs:
     description: 'The name and path of the file distribution'
     required: true
 outputs:
-  distributionId:
+  distId:
     description: 'Id of the uploaded distribution'
 runs:
   using: 'node12'
