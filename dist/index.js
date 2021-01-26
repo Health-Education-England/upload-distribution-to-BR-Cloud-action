@@ -84,7 +84,7 @@ class BrOperations {
         const stream = fs_1.default.createReadStream(distributionPath);
         const formData = new form_data_1.default();
         formData.append('dist_file', stream);
-        const uploadDistributionUrl = '/v3/distributions/';
+        const uploadDistributionUrl = '/v3/distributions';
         const config = {
             headers: formData.getHeaders(),
             maxBodyLength: Number.POSITIVE_INFINITY,
@@ -106,23 +106,11 @@ exports.BrOperations = BrOperations;
 
 "use strict";
 
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
@@ -136,7 +124,8 @@ function initBrOperations(brcStack) {
             "Content-Type": "application/json",
             "Accept": "application/json"
         },
-        timeout: 2000
+        timeout: 1000 * 120,
+        timeoutErrorMessage: "Timeout Error! The time limit of 2 minutes was exceeded."
     };
     const apiClient = new ApiClient_1.ApiClient(config);
     return new BrOperations_1.BrOperations(apiClient);
