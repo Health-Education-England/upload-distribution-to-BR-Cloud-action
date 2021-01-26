@@ -34,7 +34,7 @@ export class BrOperations {
         const formData = new FormData();
         formData.append('dist_file', stream);
 
-        const uploadDistributionUrl = '/v3/distributions/'
+        const uploadDistributionUrl = '/v3/distributions'
         const config: AxiosRequestConfig = {
             headers: formData.getHeaders(),
             maxBodyLength: Number.POSITIVE_INFINITY,
