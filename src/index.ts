@@ -8,7 +8,8 @@ function initBrOperations(brcStack: string) {
         headers: {
             "Content-Type": "application/json",
             "Accept": "application/json"
-        }
+        },
+        timeout: 2000
     }
 
     const apiClient = new ApiClient(config)
