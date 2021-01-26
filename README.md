@@ -28,7 +28,7 @@ Id of the uploaded distribution
 ## Example usage
 
 ```
-uses: adrianamiclos/upload-distribution-to-BRCloud-action@v1.0
+uses: Manifesto-Digital/upload-distribution-to-BR-Cloud-action@v1.0
 with:
   brcStack: "brStackName"
   username: ${{ secrets.BRC_USERNAME }}
