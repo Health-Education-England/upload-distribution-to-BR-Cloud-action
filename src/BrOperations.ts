@@ -40,7 +40,10 @@ export class BrOperations {
             maxBodyLength: Number.POSITIVE_INFINITY,
             maxContentLength: Number.POSITIVE_INFINITY,
         };
-        config.headers.Authorization = accessToken;
+
+        if( config.headers) {
+            config.headers.Authorization = accessToken;
+        }
 
         const response = await this.apiClient.post(
             uploadDistributionUrl,
