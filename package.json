@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Manifesto-Digital/upload-distribution-to-BR-Cloud-action#readme",
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "@types/axios": "^0.14.0",
+    "axios": "^0.26.1",
     "@types/form-data": "^2.5.0",
     "@types/node": "^14.14.22"
   },
