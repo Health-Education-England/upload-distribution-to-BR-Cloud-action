@@ -1,6 +1,6 @@
 # Upload distribution to Bloomreach(BR) Cloud action
-This action uploads a distribution to BR Cloud and outputs the distribution id. 
-The action is using the BR Cloud Rest API. The API documentation is available at `https://api-<stack-name>.onehippo.io/v3/docs`. 
+This action uploads a distribution to BR Cloud and outputs the distribution id.
+The action is using the BR Cloud Rest API. The API documentation is available at `https://api.<stack-name>.bloomreach.cloud/v3/docs`.
 ## Inputs
 
 ### `brcStack`
