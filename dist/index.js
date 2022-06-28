@@ -133,7 +133,7 @@ const core = __importStar(__nccwpck_require__(5674));
 const ApiClient_1 = __nccwpck_require__(3330);
 function initBrOperations(brcStack) {
     const config = {
-        baseURL: `https://api-${brcStack}.onehippo.io`,
+        baseURL: `https://api.${brcStack}.bloomreach.cloud`,
         headers: {
             "Content-Type": "application/json",
             "Accept": "application/json"
