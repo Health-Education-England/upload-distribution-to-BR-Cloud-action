@@ -17,5 +17,5 @@ outputs:
   distId:
     description: 'Id of the uploaded distribution'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
